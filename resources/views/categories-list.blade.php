@@ -46,28 +46,11 @@
             </li>
             @endforeach
         </ul>
+        <div>
+            {{$categories->links()}}
+        </div>
     </div>
     
-    <div class="w-200"> 
-        <h1 class="text-2xl font-bold text-green-900 text-center my-10">Top Quizzes</h1>
-        <ul class="border border-gray-200 mb-20">
-            <li class="p-2 font-bold">
-                <ul class="flex justify-between">
-                    <li class="w-150">Name</li>
-                   <li class="w-50">Action</li>
-                </ul>
-            </li>
-            
-            @foreach($quizData as $item)
-            <li class="even:bg-gray-300 p-2">
-                <ul class="flex justify-between">
-                    <li class="w-150">{{$item->name}}</li>
-                    <li class="w-50"><a  href="/start-quiz/{{$item->id}}/{{str_replace(' ','-',$item->name)}}" class="text-green-500 font-bold">Attemt Quiz</a></li>
-                </ul>
-            </li>
-            @endforeach
-        </ul>
-    </div>
 </div>
 <x-footer-user></x-footer-user>
 </body>

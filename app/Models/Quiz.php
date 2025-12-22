@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class quiz extends Model
+class Quiz extends Model
 {
     //
     function category(){
@@ -13,5 +13,9 @@ class quiz extends Model
 
     function Mcq(){
         return $this->hasMany(Mcq::class);
+    }
+
+    function Records(){
+        return $this->hasmany(Record::class);
     }
 }
